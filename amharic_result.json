@@ -1,0 +1,11 @@
+﻿{
+    "answer":  "á¨áá­áá áá½ááµ ááá¢",
+    "english_answer":  "It is a medical journal.",
+    "lang":  "am",
+    "sources":  [
+                    "EPILPSY_leaflet_2019.pdf",
+                    "Epileptic_Disorders.pdf",
+                    "Eplipsy_Definition.pdf"
+                ],
+    "guardrail":  null
+}

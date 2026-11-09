@@ -1,4 +1,6 @@
+# src/api.py
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from .pipeline import Pipeline
 
@@ -16,7 +18,9 @@ class Query(BaseModel):
 
 @app.post("/ask")
 def ask(q: Query):
-    return pipeline.query(q.text, q.lang)
+    result = pipeline.query(q.text, q.lang)
+    # Return JSON with ensure_ascii=False so Amharic is sent as raw UTF-8
+    return JSONResponse(content=result)
 
 @app.get("/health")
 def health():
